@@ -1,0 +1,28 @@
+//priority 1000
+//modern industrialization scripts
+const removendoStellarisID = [
+    
+];
+
+const removendoStellarisOutput = [
+    "stellaris:steel_ingot"
+];
+  
+ServerEvents.recipes(amcexpert => {
+    //function pra remover a galera por id
+    removendoStellarisID.forEach((recipe) => {
+        console.log("Removendo Recipe: " + recipe);
+        amcexpert.remove({ id: recipe });
+    });
+    //function pra remover a galera por output
+    removendoStellarisOutput.forEach((recipe) =>{
+        console.log("Removendo Recipe: " + recipe);
+        amcexpert.remove({output: recipe});
+    });
+
+
+
+    
+    
+    console.log('Modern Industrialization Scripts loaded!');
+})
